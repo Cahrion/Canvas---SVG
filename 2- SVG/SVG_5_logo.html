@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>İcabi Kırgız ~ Canvas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <svg width="600" height="300" style="border:3px solid #bbb">
+    <!-- Logo çizelim  
+    
+      defs              -> Fonksiyon alanı gibi düşünebilir.
+        linearGradient  -> Gradient yapısını fonksiyon alanımı ekliyoruz. 
+          stop          -> Tam olarak kaçta bitmesini istediğimizi rengiyle beraber yazıyoruz.
+      ellipse           -> Ellipse çizmemize yarar. İki yarı çapı vardır ve bu sayede ellipse çizebiliriz
+      text              -> Resme yazı yazmak için kullanılabilir.
+
+    
+    -->
+
+
+    <!-- Gradient yapısı eklentisi | fonksiyon yapısı gibi çalışır  -->
+    <defs>
+      <linearGradient 
+        id="grd" 
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" style="stop-color:red;stop-opacity:1"></stop>
+        <stop offset="100%" style="stop-color:black;stop-opacity:1"></stop>
+      </linearGradient>
+    </defs>
+    <!-- Ellipse -->
+    <ellipse
+      cx="180"
+      cy="120"
+      rx="125"
+      ry="75"
+      fill="url(#grd)"
+    ></ellipse>
+    <!-- Ellipse içi yazı -->
+    <text
+      fill="#FFF"
+      font-size="40"
+      x="130" 
+      y="130"
+      font-family="verdana"
+    >
+      SVG
+    </text>
+
+  </svg>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

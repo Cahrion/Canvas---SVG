@@ -14,43 +14,23 @@
 </head>
 
 <body>
-    <canvas id="newCanvas" width="400" height="300" style="border:1px solid #bbb">
-        <script>
+  <svg width="600" height="300" style="border:3px solid #bbb">
+    <!-- Yumuşak kenarlı dikdörtgen çizelim  
+      Yumuşak kenar için rx, ry metodları kullanılır. CSS'deki border radius olarak varsayılabilir.
+      
+    -->
 
-            /*
-                JavaScript ile bağlandık.
-            */
+    <rect 
+      width="300" 
+      height="150" 
+      style="fill:darkgreen;stroke-width:5;stroke:#000;opacity:1" 
+      x="80" 
+      y="80"
+      rx="10"
+      ry="10"
+    ></rect>
 
-            var myCanvas    = document.getElementById("newCanvas");
-            var content     = myCanvas.getContext("2d");
-
-
-            /*
-              Bir çizgi çizelim
-              -
-              moveTo(x,y);      -> Başlangıç noktamız.
-              lineTo(400,300);  -> Bitiş noktamız 
-              stroke();         -> çizdirir.
-
-              Ek olarak diğer yapıları da kullanabiliriz.
-              -
-              lineWidth         -> Çizginin kalınlığı
-              strokeStyle       -> Çizginin rengi
-
-            */
-            content.lineWidth   = "5";
-            content.strokeStyle = "red";
-
-            content.moveTo(0,0);
-            content.lineTo(400,300);
-            content.stroke();
-
-
-
-
-        </script>
-    </canvas>
-
+  </svg>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

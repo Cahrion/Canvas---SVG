@@ -14,29 +14,14 @@
 </head>
 
 <body>
-    <canvas id="newCanvas" width="700" height="350" style="border:1px solid #bbb">
-        <script>
+  <svg width="600" height="300" style="border:3px solid #bbb">
+    <!-- Daire çizelim  
+      circle -> Bu değer sayesinde kolayca cember çizilebilir.
+    -->
+    <circle cx="100" cy="100" r="80" stroke="black" stroke-Width="5" fill="darkolivegreen">
 
-            /*
-                JavaScript ile bağlandık.
-            */
-
-            var myCanvas    = document.getElementById("newCanvas").getContext("2d");
-
-            /*
-              Üçgen çizelim
-            */
-            myCanvas.lineWidth = "3";
-            myCanvas.strokeStyle = "black";
-            myCanvas.moveTo(121, 258);
-            myCanvas.lineTo(200, 150);
-            myCanvas.lineTo(300, 258);
-            myCanvas.lineTo(121, 258);
-            myCanvas.stroke();
-
-          </script>
-    </canvas>
-
+    </circle>
+  </svg>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

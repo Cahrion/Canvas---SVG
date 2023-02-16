@@ -14,33 +14,17 @@
 </head>
 
 <body>
-    <canvas id="newCanvas" width="800" height="300" style="border:1px solid #bbb">
-        <script>
+  <svg width="600" height="300" style="border:3px solid #bbb">
+    <!-- Yıldız çizelim  
+      polygon -> point noktalarına bağlı istenen noktaları ayarlar ve birleştir.
+    -->
 
-            /*
-                JavaScript ile bağlandık.
-            */
+    <polygon
+      points = "100,10 40, 198 190, 78 10, 78 160, 198"
+      style="fill:brown;stroke:#000;stroke-width:4;fill-rule:evenodd"
+    ></polygon>
 
-            var myCanvas    = document.getElementById("newCanvas").getContext("2d");
-
-            /*
-              Bir gradyan yapı kuralım
-
-              createLinearGradian()  -> Linear bir yapı oluşturmak adına kullandığımız yapı
-              addColorStop()         -> 0-1 arasında verdiğimiz yapıya kadar ilerlemesini söylediğimiz kısım.
-
-            */
-            var grd = myCanvas.createLinearGradient(0,0,450,40); // x, y, bitis x, bitis y
-            
-            grd.addColorStop(0, "red");
-            grd.addColorStop(1, "blue");
-            myCanvas.font = "58px Arial";
-            myCanvas.fillStyle = grd;
-            myCanvas.fillText("Icabi Kırgız", 100, 100); // Metin, x, y
-
-        </script>
-    </canvas>
-
+  </svg>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

@@ -14,33 +14,12 @@
 </head>
 
 <body>
-    <canvas id="newCanvas" width="200" height="200" style="border:1px solid #bbb">
-        <script>
-
-            /*
-                JavaScript ile bağlandık.
-            */
-
-            var myCanvas    = document.getElementById("newCanvas").getContext("2d");
-
-            /*
-              Bir gradyan yapı kuralım
-
-              createRadialGradient() -> Çemberimsi bir yapı oluşturmak adına kullandığımız yapı
-              addColorStop()         -> 0-1 arasında verdiğimiz yapıya kadar ilerlemesini söylediğimiz kısım.
-
-            */
-            var gradient = myCanvas.createRadialGradient(110, 90, 30, 100, 100, 70);
-
-            gradient.addColorStop(0, "pink");
-            gradient.addColorStop(0.9, "white");
-            gradient.addColorStop(1, "green");
-
-            myCanvas.fillStyle = gradient;
-            myCanvas.fillRect(20, 20, 160, 160);
-        </script>
-    </canvas>
-
+  <svg width="600" height="300" style="border:3px solid #bbb">
+    <!-- Dikdörtgen çizelim  
+      rect    -> bu yapı kullanılarak belirtilen değerler doğrultusunda dikdörtgen çizilebilir.
+    -->
+    <rect width="300" height="150" style="fill:darkgreen;stroke-width:5;stroke:#000;opacity:1" x="80" y="80"></rect>
+  </svg>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
