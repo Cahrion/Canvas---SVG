@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>İcabi Kırgız ~ Canvas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <canvas id="newCanvas" width="400" height="300" style="border:1px solid #bbb">
+        <script>
+
+            /*
+                JavaScript ile bağlandık.
+            */
+
+            var myCanvas    = document.getElementById("newCanvas");
+            var content     = myCanvas.getContext("2d");
+
+            
+            /*
+                Canvas'ta bir kare yapalım
+                -
+                fillStyle  = "Rengi seçilir"
+                fillRect   = "Konum ve gerekli bilgiler girilir."
+            */
+
+            content.fillStyle = "#FF0000";
+            content.fillRect(25,35,64,64); // x, y, genişlik, yükseklik 
+
+            /*
+                Canvas'ta stroke yapısı border yapısında eş değerdir. Kenarlık çizdirir.
+                -
+                strokeStyle = "Kenarlığın rengi"
+                lineWidth   = "Kenarlığın kalınlığı"
+                strokeRect  = "Hangi konum için çizilcekse o boyutlar girilir."
+            */
+
+            content.strokeStyle = "#000";       
+            content.lineWidth   = "3";          
+            content.strokeRect(25,35,64,64);    
+
+        </script>
+    </canvas>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
